@@ -35,4 +35,4 @@ jobs:
        
     # Runs a set of commands using the runners shell
     - name: creating surge environment
-      run: surge http://react-space.surge.sh/ ${SURGE-TOKEN}
+      run: surge http://react-space.surge.sh/ --token ${{secrets.SURGE-TOKEN}}
