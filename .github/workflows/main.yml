@@ -36,4 +36,4 @@ jobs:
     # Runs a set of commands using the runners shell
     - name: creating surge environment
       run: npm install -g surge
-    - run: surge ./ ${{secrets.DOMAIN-NAME}} --token ${{secrets.SURGE-TOKEN}}
+    - run: surge ./ ${{secrets.DOMAIN_NAME}} --token ${{secrets.SURGE_TOKEN}}
