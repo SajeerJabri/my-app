@@ -1,13 +1,27 @@
-import React from 'react';
+import React, { createContext } from 'react';
+import Clock from './Clock';
+import Parent from './Parent';
+import MainStudent from './components/mainStudent';
+import {StudentProvider} from './context/ContextData';
 
+const FirstName = createContext();
+const LastName = createContext();
 const App=() => {
   return (
-    <div>
-     <h1>welcome to my website.</h1>
-     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut est quae ea perferendis iste a fuga adipisci. Labore illo 
-     ullam suscipit veritatis dignissimos sit, omnis vitae, expedita, officiis est quam!</p>
-     <button style={{padding: "10px 25px"}}>Click Me</button>
-     </div>
+  	<>
+  	<Clock />
+  	<FirstName.Provider value={"Hussain"}>
+	  <LastName.Provider value={"Ali"}>
+  	<Parent />
+	  </LastName.Provider>
+  	</FirstName.Provider>
+	  <StudentProvider>
+	  <MainStudent/>
+	  </StudentProvider>
+
+  	</>
   );
 }
+export { FirstName, LastName };
 export default App;
+
